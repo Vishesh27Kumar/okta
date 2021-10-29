@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import axios from 'axios';
 
+ Mono<UserData> saveProfilePhoto(Part filePart);
+
 body: {
   first_name: params["first_name"],
   middle_name: params["middle_name"],
