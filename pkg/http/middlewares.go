@@ -35,7 +35,7 @@ func OktaAuth(h http.Handler) http.Handler {
 func validateAccessToken(accessToken []string) (*jwtverifier.Jwt, error) {
 	parts := strings.Split(accessToken[0], " ")
 	jwtVerifierSetup := jwtverifier.JwtVerifier{
-		Issuer:           "https://dev-509836.oktapreview.com/oauth2/default",
+		Issuer:           "https://localhost:1001/oauth2/default",
 		ClaimsToValidate: map[string]string{"aud": "api://default", "cid": "0oagcbm1o6GTTB9Da0h7"},
 	}
 	verifier := jwtVerifierSetup.New()
